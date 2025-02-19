@@ -32,3 +32,11 @@ const dog: Dog = {
 dog.woof();
 
 const pet: Pet = cat;
+
+function isDog(pet: Pet): pet is Dog {
+	return 'woof' in pet;
+}
+
+if (isDog(pet)) {
+	pet.woof();
+}
