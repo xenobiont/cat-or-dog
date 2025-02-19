@@ -33,6 +33,14 @@ dog.woof();
 
 const pet: Pet = cat;
 
+function makeSound(pet: Pet) {
+	if (isDog(pet)) {
+		pet.woof();
+	} else {
+		pet.meow();
+	}
+}
+
 function isDog(pet: Pet): pet is Dog {
 	return 'woof' in pet;
 }
@@ -40,3 +48,5 @@ function isDog(pet: Pet): pet is Dog {
 if (isDog(pet)) {
 	pet.woof();
 }
+
+makeSound(pet);
